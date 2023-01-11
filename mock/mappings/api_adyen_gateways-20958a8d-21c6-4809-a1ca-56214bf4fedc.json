@@ -1,0 +1,45 @@
+{
+  "id" : "20958a8d-21c6-4809-a1ca-56214bf4fedc",
+  "name" : "api_adyen_gateways",
+  "request" : {
+    "url" : "/api/adyen_gateways",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"api_key\":\"xxxx-yyyy-zzzz\",\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\",\"merchant_account\":\"xxxx-yyyy-zzzz\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"name\":\"Incentro Adyen Gateway\"},\"type\":\"adyen_gateways\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"KjOMEsZXgx\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2023-01-11T15:37:18.175Z\",\"updated_at\":\"2023-01-11T15:37:18.175Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/payment_methods\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/relationships/adyen_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "14",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"ae45de0f12db88a01a39c4fe63c94d6d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "0f17aac4-b7ed-4c60-a4a7-5ebc6e429a70",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 15:37:18 GMT",
+      "X-Served-By" : "cache-ams21064-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673451438.108436,VS0,VE82",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "20958a8d-21c6-4809-a1ca-56214bf4fedc",
+  "persistent" : true,
+  "insertionIndex" : 3703
+}

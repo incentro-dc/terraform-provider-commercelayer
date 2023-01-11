@@ -1,0 +1,29 @@
+{
+  "id" : "75451a5c-82e3-4252-8ee1-938f32a94350",
+  "name" : "api_payment_methods_qelgasbgqm",
+  "request" : {
+    "url" : "/api/payment_methods/QElGasbGqM",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 404,
+    "body" : "<!DOCTYPE html>\n<html>\n<head>\n  <title>Error 404</title>\n  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n  <link href=\"https://data.commercelayer.app/assets/logos/full-logo/white/commercelayer_full_logo_white.svg\"\n    rel=\"preload\" as=\"image\">\n  <link href=\"https://data.commercelayer.app/assets/fonts/eina01.min.css\" rel=\"preload\" as=\"style\">\n  <link href=\"https://data.commercelayer.app/assets/css/commercelayer.v3.min.css\" rel=\"stylesheet\">\n</head>\n<body class=\"bg-white\">\n  <div class=\"py-6\" style=\"background-color: #131313;\">\n    <img class=\"w-52 mx-auto max-w-screen-sm lg:max-w-screen-lg\"\n      src=\"https://data.commercelayer.app/assets/logos/full-logo/white/commercelayer_full_logo_white.svg\"\n      alt=\"Commerce Layer logo\">\n  </div>\n  <div class=\"md:h-screen flex flex-wrap justify-center content-center items-center my-auto\">\n    <div class=\"w-screen flex flex-wrap justify-center content-center items-center\">\n      <svg class=\"w-1/2 md:w-2/5 pt-20 pb-10 md:pb-16 fill-current text-gray-200\" version=\"1.1\" id=\"error\"\n        xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n        viewBox=\"0 0 800 540\" style=\"enable-background:new 0 0 800 540;\" xml:space=\"preserve\">\n        <style type=\"text/css\">\n          .st0 {\n            fill: #E5E5E5;\n          }\n        </style>\n        <g id=\"_x34_04\">\n          <g id=\"_x34_R\">\n            <path class=\"st0\"\n              d=\"M800,287.3h-34.5v73.5h-67.9v-73.5H529.4v-54.7L688,1h77.5v221.9H800V287.3z M697.1,97.3L611,222.9h86.6V97.3H697.1z\" />\n          </g>\n          <g id=\"_x34_L\">\n            <path class=\"st0\"\n              d=\"M270.6,287.3h-34.5v73.5h-67.9v-73.5H0v-54.7L158.6,1h77.5v221.9h34.5V287.3z M167.7,97.3L81.6,222.9h86.6V97.3H167.7z\" />\n          </g>\n          <path id=\"magnifying-glass\" class=\"st0\"\n            d=\"M548.6,361.6c-3.5-6.9-12.2-9.8-19.2-5.8l-11.4,6.5l-13.8-27.6c35.6-21.4,64.1-55,78.2-97.4C613.6,143,562.4,40.8,468.2,9.5S271.7,29.3,240.4,123.6S260.2,320,354.5,351.4c42.4,14.1,86.4,11.4,124.8-4.3l14.5,28.9l-12.7,7.2c-6.4,3.6-8.8,11.7-5.5,18.3l57.8,115.4c10.3,20.5,35.2,28.8,55.8,18.6c20.5-10.3,28.8-35.3,18.6-55.8L548.6,361.6z M372,298.8c-65.3-21.7-100.7-92.4-79-157.7c21.7-65.3,92.4-100.7,157.7-79s100.7,92.4,79,157.7C508,285,437.2,320.5,372,298.8z\" />\n          <path id=\"question-mark\" class=\"st0\"\n            d=\"M412.3,91c-49.6,0-89.9,40.3-89.9,89.9c0,49.6,40.3,89.9,89.9,89.9c49.6,0,89.9-40.3,89.9-89.9C502.3,131.3,461.9,91,412.3,91z M411.4,236c-8,0-13.5-5.4-13.5-13.4c0-7.8,5.6-13.5,13.5-13.5c7.8,0,13.5,5.7,13.5,13.5C424.9,230.6,419.2,236,411.4,236z M420.9,199.9c0,2.1,0.3,3,0.3,3h-21c0,0-0.3-1.9-0.3-3.3c0-23.6,25.8-27.8,25.8-41.6c0-8-5.4-12.6-13.2-12.6c-8.1,0-13.7,5.4-13.7,13.2c0,3.9,0.9,8,0.9,8h-21.3c0,0-1.1-3.9-1.1-8.9c0-18.2,13.7-31.9,35-31.9c22.7,0,35,13.7,35,31.5C447.3,182.1,420.9,187.2,420.9,199.9z\" />\n        </g>\n      </svg>\n    </div>\n    <div class=\"w-screen flex flex-wrap pb-16 justify-center content-end md:content-center items-end md:items-center\">\n      <div class=\"px-6 md:px-32 lg:px-48 text-center\">\n        <h2 class=\"uppercase text-xl md:text-4xl lg:text-5xl leading-tight\"\n          style=\"font-family: Eina01-Bold, sans-serif; color: #131313; font-weight: bold;\">Oops, <span\n            style=\"color: #2DAEFF;\">page not found.</span></h2>\n        <p class=\"mt-2 text-sm md:text-base lg:text-lg max-w-xl md:max-w-4xl text-gray-900\"\n          style=\"font-family: Eina01-Regular, sans-serif; color: #464646\">The page you are looking for doesn't seem to\n          exist. It might have been removed, had its name changed, or you might has mistyped the address.</p>\n      </div>\n    </div>\n  </div>\n</body>\n</html>",
+    "headers" : {
+      "Server" : "Varnish",
+      "Retry-After" : "0",
+      "Content-Type" : "text/html",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 15:37:20 GMT",
+      "Via" : "1.1 varnish",
+      "X-Served-By" : "cache-ams21054-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673451441.714447,VS0,VE33"
+    }
+  },
+  "uuid" : "75451a5c-82e3-4252-8ee1-938f32a94350",
+  "persistent" : true,
+  "scenarioName" : "scenario-2-api-payment_methods-QElGasbGqM",
+  "requiredScenarioState" : "scenario-2-api-payment_methods-QElGasbGqM-4",
+  "insertionIndex" : 3715
+}

@@ -1,0 +1,37 @@
+{
+  "id" : "be89c7fe-e4e9-4b86-9753-5e47c2092349",
+  "name" : "api_adyen_gateways_kjomeszxgx",
+  "request" : {
+    "url" : "/api/adyen_gateways/KjOMEsZXgx",
+    "method" : "DELETE"
+  },
+  "response" : {
+    "status" : 204,
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "24",
+      "X-Ratelimit-Period" : "300",
+      "Cache-Control" : "no-cache",
+      "X-Request-Id" : "cab1e48e-d6a8-4c4c-b010-74c7b18d76ae",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 15:37:20 GMT",
+      "X-Served-By" : "cache-ams21020-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673451440.422888,VS0,VE88",
+      "Vary" : "Origin"
+    }
+  },
+  "uuid" : "be89c7fe-e4e9-4b86-9753-5e47c2092349",
+  "persistent" : true,
+  "insertionIndex" : 3713
+}

@@ -1,0 +1,43 @@
+{
+  "id" : "edbf122a-dd4e-4c37-82fc-da6ad6ef31e6",
+  "name" : "api_adyen_gateways_kjomeszxgx",
+  "request" : {
+    "url" : "/api/adyen_gateways/KjOMEsZXgx",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"data\":{\"id\":\"KjOMEsZXgx\",\"type\":\"adyen_gateways\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx\"},\"attributes\":{\"name\":\"Incentro Adyen Gateway\",\"created_at\":\"2023-01-11T15:37:18.175Z\",\"updated_at\":\"2023-01-11T15:37:18.175Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"live_url_prefix\":\"1797a841fbb37ca7-AdyenDemo\"},\"relationships\":{\"payment_methods\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/relationships/payment_methods\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/payment_methods\"}},\"adyen_payments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/relationships/adyen_payments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/adyen_gateways/KjOMEsZXgx/adyen_payments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "21",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"ae45de0f12db88a01a39c4fe63c94d6d\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "9ea424fa-a339-4a0e-90e5-4bb1d4e2c20f",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 15:37:19 GMT",
+      "X-Served-By" : "cache-ams21043-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673451440.883364,VS0,VE38",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "edbf122a-dd4e-4c37-82fc-da6ad6ef31e6",
+  "persistent" : true,
+  "scenarioName" : "scenario-1-api-adyen_gateways-KjOMEsZXgx",
+  "requiredScenarioState" : "scenario-1-api-adyen_gateways-KjOMEsZXgx-3",
+  "newScenarioState" : "scenario-1-api-adyen_gateways-KjOMEsZXgx-4",
+  "insertionIndex" : 3710
+}

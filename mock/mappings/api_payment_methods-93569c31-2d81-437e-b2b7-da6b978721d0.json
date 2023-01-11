@@ -1,0 +1,45 @@
+{
+  "id" : "93569c31-2d81-437e-b2b7-da6b978721d0",
+  "name" : "api_payment_methods",
+  "request" : {
+    "url" : "/api/payment_methods",
+    "method" : "POST",
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"data\":{\"attributes\":{\"currency_code\":\"EUR\",\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"},\"moto\":false,\"payment_source_type\":\"AdyenPayment\",\"price_amount_cents\":0},\"relationships\":{\"payment_gateway\":{\"data\":{\"id\":\"KjOMEsZXgx\",\"type\":\"payment_gateways\"}}},\"type\":\"payment_methods\"}}\n",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 201,
+    "body" : "{\"data\":{\"id\":\"QElGasbGqM\",\"type\":\"payment_methods\",\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM\"},\"attributes\":{\"payment_source_type\":\"adyen_payments\",\"name\":\"Adyen Payment\",\"currency_code\":\"EUR\",\"moto\":false,\"disabled_at\":null,\"price_amount_cents\":0,\"price_amount_float\":0.0,\"formatted_price_amount\":\"€0,00\",\"created_at\":\"2023-01-11T15:37:18.350Z\",\"updated_at\":\"2023-01-11T15:37:18.350Z\",\"reference\":null,\"reference_origin\":null,\"metadata\":{\"foo\":\"bar\",\"testName\":\"commercelayer_payment_method.incentro_payment_method\"}},\"relationships\":{\"market\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/relationships/market\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/market\"}},\"payment_gateway\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/relationships/payment_gateway\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/payment_gateway\"}},\"attachments\":{\"links\":{\"self\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/relationships/attachments\",\"related\":\"https://the-green-brand-245.commercelayer.io/api/payment_methods/QElGasbGqM/attachments\"}}},\"meta\":{\"mode\":\"test\",\"organization_id\":\"VyjBZFOWJy\"}}}",
+    "headers" : {
+      "Server" : "Cowboy",
+      "X-Frame-Options" : "SAMEORIGIN",
+      "X-Xss-Protection" : "1; mode=block",
+      "X-Content-Type-Options" : "nosniff",
+      "X-Download-Options" : "noopen",
+      "X-Permitted-Cross-Domain-Policies" : "none",
+      "Referrer-Policy" : "strict-origin-when-cross-origin",
+      "X-Ratelimit-Limit" : "600",
+      "X-Ratelimit-Count" : "15",
+      "X-Ratelimit-Period" : "300",
+      "Content-Type" : "application/vnd.api+json",
+      "Etag" : "W/\"097ccaed767c7e49e61cd7e762384269\"",
+      "Cache-Control" : "max-age=0, private, must-revalidate",
+      "X-Request-Id" : "f181a532-782b-45db-8a8c-cce00583c3d6",
+      "Strict-Transport-Security" : "max-age=63072000; includeSubDomains",
+      "Via" : "1.1 vegur, 1.1 varnish",
+      "Accept-Ranges" : "bytes",
+      "Date" : "Wed, 11 Jan 2023 15:37:18 GMT",
+      "X-Served-By" : "cache-ams21058-AMS",
+      "X-Cache" : "MISS",
+      "X-Cache-Hits" : "0",
+      "X-Timer" : "S1673451438.285282,VS0,VE81",
+      "Vary" : "Accept, Origin"
+    }
+  },
+  "uuid" : "93569c31-2d81-437e-b2b7-da6b978721d0",
+  "persistent" : true,
+  "insertionIndex" : 3704
+}
