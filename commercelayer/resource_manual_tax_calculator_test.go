@@ -6,6 +6,7 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/resource"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/terraform"
 	commercelayer "github.com/incentro-dc/go-commercelayer-sdk/api"
+	"strings"
 )
 
 func testAccCheckManualTaxCalculatorDestroy(s *terraform.State) error {
@@ -17,6 +18,19 @@ func testAccCheckManualTaxCalculatorDestroy(s *terraform.State) error {
 				GETManualTaxCalculatorsManualTaxCalculatorId(context.Background(), rs.Primary.ID).Execute()
 			if resp.StatusCode == 404 {
 				fmt.Printf("commercelayer_manual_tax_calculator with id %s has been removed\n", rs.Primary.ID)
+				continue
+			}
+			if err != nil {
+				return err
+			}
+
+			return fmt.Errorf("received response code with status %d", resp.StatusCode)
+		}
+		if rs.Type == "commercelayer_tax_rule" {
+			_, resp, err := client.TaxRulesApi.
+				GETTaxRulesTaxRuleId(context.Background(), rs.Primary.ID).Execute()
+			if resp.StatusCode == 404 {
+				fmt.Printf("commercelayer_tax_rule with id %s has been removed\n", rs.Primary.ID)
 				continue
 			}
 			if err != nil {
@@ -41,7 +55,7 @@ func (s *AcceptanceSuite) TestAccManualTaxCalculator_basic() {
 		CheckDestroy:      testAccCheckManualTaxCalculatorDestroy,
 		Steps: []resource.TestStep{
 			{
-				Config: testAccManualTaxCalculatorCreate(resourceName),
+				Config: strings.Join([]string{testAccManualTaxCalculatorCreate(resourceName), testAccTaxRuleCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "type", manualTaxCalculatorsType),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Tax Calculator"),
@@ -49,7 +63,7 @@ func (s *AcceptanceSuite) TestAccManualTaxCalculator_basic() {
 				),
 			},
 			{
-				Config: testAccManualTaxCalculatorUpdate(resourceName),
+				Config: strings.Join([]string{testAccManualTaxCalculatorUpdate(resourceName), testAccTaxRuleCreate(resourceName)}, "\n"),
 				Check: resource.ComposeTestCheckFunc(
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.name", "Incentro Manual Tax Calculator Changed"),
 					resource.TestCheckResourceAttr(resourceName, "attributes.0.metadata.bar", "foo"),

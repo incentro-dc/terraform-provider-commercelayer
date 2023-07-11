@@ -66,6 +66,22 @@ func resourceManualTaxCalculator() *schema.Resource {
 					},
 				},
 			},
+			"relationships": {
+				Description: "Resource relationships",
+				Type:        schema.TypeList,
+				MaxItems:    1,
+				MinItems:    1,
+				Optional:    true,
+				Elem: &schema.Resource{
+					Schema: map[string]*schema.Schema{
+						"tax_rule_id": {
+							Description: "The associated tax rule id.",
+							Type:        schema.TypeString,
+							Optional:    true,
+						},
+					},
+				},
+			},
 		},
 	}
 }
@@ -93,6 +109,7 @@ func resourceManualTaxCalculatorCreateFunc(ctx context.Context, d *schema.Resour
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
+	//relationships := nestedMap(d.Get("relationships"))
 
 	manualTaxCalculatorCreate := commercelayer.ManualTaxCalculatorCreate{
 		Data: commercelayer.ManualTaxCalculatorCreateData{
@@ -103,6 +120,13 @@ func resourceManualTaxCalculatorCreateFunc(ctx context.Context, d *schema.Resour
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
+			//Relationships: &commercelayer.ManualTaxCalculatorCreateDataRelationships{
+			//	TaxRules: &commercelayer.ManualTaxCalculatorDataRelationshipsTaxRules{
+			//		Data: commercelayer.ManualTaxCalculatorDataRelationshipsTaxRulesData{
+			//			Type: stringRef(taxRulesType),
+			//			Id:   stringRef(relationships["tax_rule_id"].(string)),
+			//		}},
+			//},
 		},
 	}
 
@@ -131,6 +155,7 @@ func resourceManualTaxCalculatorUpdateFunc(ctx context.Context, d *schema.Resour
 	c := i.(*commercelayer.APIClient)
 
 	attributes := nestedMap(d.Get("attributes"))
+	//relationships := nestedMap(d.Get("relationships"))
 
 	var manualTaxCalculatorUpdate = commercelayer.ManualTaxCalculatorUpdate{
 		Data: commercelayer.ManualTaxCalculatorUpdateData{
@@ -142,6 +167,14 @@ func resourceManualTaxCalculatorUpdateFunc(ctx context.Context, d *schema.Resour
 				ReferenceOrigin: stringRef(attributes["reference_origin"]),
 				Metadata:        keyValueRef(attributes["metadata"]),
 			},
+			//Relationships: &commercelayer.ManualTaxCalculatorCreateDataRelationships{
+			//	TaxRules: &commercelayer.ManualTaxCalculatorDataRelationshipsTaxRules{
+			//		Data: commercelayer.ManualTaxCalculatorDataRelationshipsTaxRulesData{
+			//			Type: stringRef(manualTaxCalculatorsType),
+			//			Id:   stringRef(relationships["tax_rule_id"].(string)),
+			//		},
+			//	},
+			//},
 		},
 	}
 
