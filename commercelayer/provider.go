@@ -2,6 +2,7 @@ package commercelayer
 
 import (
 	"context"
+
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
@@ -36,6 +37,12 @@ var baseSchema = map[string]*schema.Schema{
 		Required:    true,
 		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_AUTH_ENDPOINT", nil),
 		Description: "The Commercelayer auth endpoint",
+	},
+	"rate_limiter": {
+		Type:        schema.TypeBool,
+		Optional:    true,
+		DefaultFunc: schema.EnvDefaultFunc("COMMERCELAYER_RATE_LIMITER", true),
+		Description: "Enable rate limiting when hitting commerce layer",
 	},
 }
 
@@ -103,6 +110,7 @@ func (c *Configuration) configureFunc(ctx context.Context, d *schema.ResourceDat
 	clientSecret := d.Get("client_secret").(string)
 	apiEndpoint := d.Get("api_endpoint").(string)
 	authEndpoint := d.Get("auth_endpoint").(string)
+	rateLimiter := d.Get("rate_limiter").(bool)
 
 	credentials := clientcredentials.Config{
 		ClientID:     clientId,
@@ -119,6 +127,12 @@ func (c *Configuration) configureFunc(ctx context.Context, d *schema.ResourceDat
 	}
 
 	httpClient := oauth2.NewClient(newCtx, tokenSource)
+
+	if rateLimiter {
+		httpClient.Transport = &throttledTransport{
+			transport: httpClient.Transport,
+		}
+	}
 
 	commercelayerClient := api.NewAPIClient(&api.Configuration{
 		HTTPClient: httpClient,

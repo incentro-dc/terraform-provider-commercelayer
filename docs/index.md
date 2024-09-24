@@ -35,6 +35,7 @@ The provider attempts to read the required values from environment variables:
 - `COMMERCELAYER_CLIENT_SECRET`
 - `COMMERCELAYER_API_ENDPOINT`
 - `COMMERCELAYER_AUTH_ENDPOINT`
+- `COMMERCELAYER_RATE_LIMITER`
 
 Alternatively, you can set it up directly in the terraform file:
 
@@ -44,6 +45,7 @@ provider "commercelayer" {
     client_secret = "<client_secret>"
     api_endpoint  = "<api_endpoint>"
     auth_endpoint = "<auth_endpoint>"
+    rate_limiter  = "true|false"
 }
 ```
 
